@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4faff;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0055a5;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #87ceeb;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-image: url('background.jpg');
+    background-size: cover;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    background-color: #eaf5ff;
+}
+
+.feature {
+    width: 22%;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #0055a5;
+}
+
+.breathing-widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+/* 呼吸容器 */
+.breathing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* 呼吸球主体 */
+.breathing-ball {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #87cefa, #0055a5);
+    position: relative;
+    animation: breathing 6s infinite;
+}
+
+/* 动态光环 */
+.light-glow {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(135, 206, 250, 0.4);
+    animation: glow 6s infinite;
+}
+
+/* 呼吸提示文本 */
+.breathing-text {
+    font-size: 1.5rem;
+    color: #0055a5;
+    margin-top: 1rem;
+    animation: textChange 6s infinite;
+}
+
+/* 呼吸球缩放动画 */
+@keyframes breathing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+/* 光环动态效果 */
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.5);
+    }
+}
+
+/* 动态文本切换 */
+@keyframes textChange {
+    0%, 50% {
+        content: "吸气";
+    }
+    51%, 100% {
+        content: "呼气";
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0055a5;
+    color: #fff;
+}
+/* 新增模块样式 */
+section {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    background: #f4faff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0055a5;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p, ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+img {
+    display: block;
+    max-width: 80%;
+    margin: 1rem auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.hotline {
+    text-align: center;
+}
+
+.hotline-number {
+    font-size: 1.5rem;
+    color: #d32f2f;
+    margin: 1rem 0;
+}
+
+.hotline a {
+    color: #0055a5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
